@@ -17,7 +17,7 @@
             @else
               <a href="/" class="post-good"><i class="fas fa-star" style="color: gold;"></i></a>
             @endif
-            <a href="/" class="post-good-user">いいねしたユーザ</a>
+            <a href="/post/{{ $post->id }}/favorites" class="post-good-user">いいねしたユーザ</a>
           </p>
         </div>
       </div>

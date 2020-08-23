@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 // Home
 Route::get('/', 'Home\HomeController@index');
+
+// Post
+Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');
