@@ -1,0 +1,96 @@
+/*********/
+/** all **/
+/*********/
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+  width: 95%;
+  margin-right: auto;
+  margin-left : auto;
+}
+
+a {
+  text-decoration:none;
+}
+
+/************/
+/** header **/
+/************/
+
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav > ul {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 18px;
+}
+
+nav > ul > li > a {
+  color: #636b6f;
+  padding: 0 auto;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/**********/
+/** Home **/
+/**********/
+
+.home-content {
+  text-align: center;
+}
+
+.home-post {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.post-user-name {
+  font-size: 1.3em;
+  color: #16160e;
+}
+
+.post-photo {
+  width: 200px;
+  height: 200px;
+}
+
+.post-sub {
+
+}
+
+.post-caption {
+
+}
+
+.post-good {
+
+}
+
+.post-time, .post-good-user {
+  font-size: 0.7em;
+	padding-left: 1em;
+	color: #727171;
+}
