@@ -18,3 +18,6 @@ Route::get('/', 'Home\HomeController@index');
 
 // Post
 Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');
+
+// User
+Route::get('/user/{user_id}', 'User\UserController@show');

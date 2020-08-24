@@ -5,8 +5,8 @@
     @foreach ($favorites as $fav)
       <div class="fav-users">
         <p>
-          <a href="/"><img src="{{ $fav->user->icon }}" class="fav-user-icon"></a>
-          <a href="/" class="fav-user-name">{{ $fav->user->name }}</a>
+          <a href="/user/{{ $fav->user->id }}"><img src="{{ $fav->user->icon }}" class="fav-user-icon"></a>
+          <a href="/user/{{ $fav->user->id }}" class="fav-user-name">{{ $fav->user->name }}</a>
         </p>
       </div>
     @endforeach

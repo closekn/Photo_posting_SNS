@@ -5,7 +5,7 @@
     @foreach ($posts as $post)
       <div class="home-post">
         <p>
-          <a href="/" class="post-user-name">{{ $post->user->name }}</a>
+          <a href="/user/{{ $post->user->id }}" class="post-user-name">{{ $post->user->name }}</a>
           <small class="post-time">{{ $post->created_at }}</small>
         </p>
         <img src="{{ $post->photo }}" class="post-photo">

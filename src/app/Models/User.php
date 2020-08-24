@@ -25,4 +25,14 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function favorites()
+    {
+        return $this->hasMany(Favorite::class);
+    }
+
+    public function getFavorites()
+    {
+        return $this->hasManyThrough(Favorite::class, Post::class);
+    }
+
 }

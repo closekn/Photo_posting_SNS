@@ -95,6 +95,64 @@ nav > ul > li > a {
 	color: #727171;
 }
 
+/**********/
+/** User **/
+/**********/
+
+.user-content {
+  text-align: center;
+}
+
+.user-content-info {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  color: #5d627b;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-content-icon {
+  width: 5em;
+  height: 5em;
+  vertical-align: middle;
+}
+
+.user-content-name {
+  font-size: 1.5em;
+  color: #16160e;
+  padding-left: 1em;
+}
+
+.user-content-fav {
+  padding-left: 2em;
+}
+
+.user-photo-content {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  color: #5d627b;
+  background: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.user-photo-content > div {
+  display: inline-block;
+  width: 33%;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.user-photo-content > div > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /***************/
 /** favorites **/
 /***************/
@@ -105,7 +163,7 @@ nav > ul > li > a {
 
 .fav-users {
   padding: 0.5em 1em;
-  margin: 2em 0;
+  margin: 1em 0;
   color: #5d627b;
   background: white;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
