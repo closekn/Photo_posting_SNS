@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Auth
+Route::get('/login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout');
+// Github
+Route::get('/login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallback');
+
 // Home
 Route::get('/', 'Home\HomeController@index');
 

@@ -15,7 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('github_id')->unique();
+            $table->string('name');
             $table->text('icon');
             $table->rememberToken();
             $table->timestamps();

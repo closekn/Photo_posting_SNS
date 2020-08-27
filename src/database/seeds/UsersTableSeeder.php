@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
         // make 10 users
         for ($i = 1; $i <= 10;$i++) {
             User::create([
+                'github_id'      => str_random(7).$i,
                 'name'           => 'test_user'.$i,
                 'icon'           => 'http://placehold.jp/1/300x300.png?text=test_user'.$i,
                 'remember_token' => str_random(10),

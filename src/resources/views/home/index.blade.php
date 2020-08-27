@@ -24,6 +24,6 @@
     @endforeach
   </div>
   <div class="home-paging">
-    {{ $posts->links() }}
+    {{ $posts->links('vendor.pagination.simple-default') }}
   </div>
 @endsection
