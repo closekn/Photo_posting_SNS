@@ -24,6 +24,8 @@ Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallbac
 Route::get('/', 'Home\HomeController@index');
 
 // Post
+Route::get('/post/create', 'Post\PostController@create');
+Route::post('/post', 'Post\PostController@store');
 Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');
 
 // User

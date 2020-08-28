@@ -173,6 +173,29 @@ nav > ul > li > a, nav > ul > li > form > a {
   height: auto;
 }
 
+/*****************/
+/** Post Create **/
+/*****************/
+
+.form-group {
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.error-post-create {
+  text-align: center;
+}
+
+.error-post-create > strong {
+  color: #DC143C;
+}
+
+.error-post-create > ul {
+  list-style: none;
+  color: #ff6666;
+}
+
 /***************/
 /** favorites **/
 /***************/

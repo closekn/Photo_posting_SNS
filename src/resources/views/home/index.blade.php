@@ -10,7 +10,7 @@
         </p>
         <img src="{{ $post->photo }}" class="post-photo">
         <div class="post-sub">
-          <p class="post-caption">{{ $post->caption }}</p>
+          <p class="post-caption">{!! nl2br(e($post->caption)) !!}</p>
           <p>
             @if (true)
               <a href="/" class="post-good"><i class="far fa-star" style="color: gray;"></i></a>

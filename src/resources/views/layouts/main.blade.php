@@ -29,7 +29,7 @@
                                 <a href="javascript:logout.submit()">Logout</a>
                             </form>
                         </li>
-                        <li><a href="/">Post</a></li>
+                        <li><a href="/post/create">Post</a></li>
                     @else
                         <li><a href="/login">Login</a></li>
                         <li><a href="/login">Post</a></li>
