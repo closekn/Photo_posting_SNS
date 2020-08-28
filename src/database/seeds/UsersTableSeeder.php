@@ -14,11 +14,11 @@ class UsersTableSeeder extends Seeder
     {
         //-- test data
         // make 10 users
-        for ($i = 1; $i <= 10;$i++) {
+        for ($user_id = 1; $user_id <= 8; $user_id++) {
             User::create([
-                'github_id'      => str_random(7).$i,
-                'name'           => 'test_user'.$i,
-                'icon'           => 'http://placehold.jp/1/300x300.png?text=test_user'.$i,
+                'github_id'      => str_random(7).$user_id,
+                'name'           => 'test_user'.$user_id,
+                'icon'           => 'http://placehold.jp/'.sprintf('%06X', mt_Rand(0, 0xFFFFFF)).'/'.sprintf('%06X', mt_Rand(0, 0xFFFFFF)).'/300x300.png?text=test_user'.$user_id,
                 'remember_token' => str_random(10),
                 'created_at'     => now(),
                 'updated_at'     => now(),
