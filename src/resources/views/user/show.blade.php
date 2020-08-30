@@ -13,7 +13,7 @@
     </div>
 
     <div class="user-photo-content">
-      @foreach ($user->posts as $post)
+      @foreach ($user->posts->sortByDesc('created_at') as $post)
         <div>
           <img src="{{ $post->photo }}">
         </div>
