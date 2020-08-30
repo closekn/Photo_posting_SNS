@@ -38,7 +38,10 @@
                 </ul>
             </nav>
         </header>
-        @yield('content')
+
+        <div class="main-contents">
+            @yield('content')
+        </div>
     </body>
 
 </html>
