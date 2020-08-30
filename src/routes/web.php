@@ -20,10 +20,8 @@ Route::post('/logout', 'Auth\LoginController@logout');
 Route::get('/login/github', 'Auth\LoginController@redirectToProvider');
 Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallback');
 
-// Home
-Route::get('/', 'Home\HomeController@index');
-
 // Post
+Route::get('/', 'Post\PostController@index');
 Route::get('/post/create', 'Post\PostController@create');
 Route::post('/post', 'Post\PostController@store');
 Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');

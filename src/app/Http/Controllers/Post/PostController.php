@@ -9,6 +9,15 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+  public function index()
+  {
+    $posts = Post::orderBy('created_at', 'desc')->simplePaginate(10);
+
+    return view('post.index', [
+      'posts' => $posts
+    ]);
+  }
+
   public function create()
   {
     return view('post.create');
