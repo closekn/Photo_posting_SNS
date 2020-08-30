@@ -93,16 +93,16 @@ nav > ul > li > a, nav > ul > li > form > a {
   height: 200px;
 }
 
-.post-sub {
-
+.post-favorite-items {
+  /* text-align: center;
+  display: flex; */
+  display: flex;
+  justify-content: center; /*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
 }
 
-.post-caption {
-
-}
-
-.post-good {
-
+.post-good-form {
+  margin: 0rem 0rem 0.3rem;
 }
 
 .post-time, .post-good-user {

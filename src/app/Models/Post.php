@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\softDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Post extends Model
 {
@@ -28,6 +29,11 @@ class Post extends Model
     public function favorites()
     {
         return $this->hasMany(Favorite::class);
+    }
+
+    public function isFavoritedByAuthUser(): bool
+    {
+        return $this->hasMany(Favorite::class)->where('user_id', Auth::id())->first() ? true : false;
     }
 
 }

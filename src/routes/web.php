@@ -30,3 +30,7 @@ Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');
 
 // User
 Route::get('/user/{user_id}', 'User\UserController@show');
+
+// Favorite
+Route::post('/favorite/create', 'Favorite\FavoriteController@create');
+Route::post('/favorite/delete', 'Favorite\FavoriteController@delete');
