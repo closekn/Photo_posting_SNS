@@ -42,6 +42,18 @@
         <div class="main-contents">
             @yield('content')
         </div>
+
+
+        <footer>
+            <hr>
+            <p>
+                Copyright © 2020
+                @if ( date('Y') != 2020 )
+                    - {{ date('Y') }}
+                @endif
+                closekn All Rights Reserved.
+            </p>
+        </footer>
     </body>
 
 </html>

@@ -20,6 +20,7 @@ a {
 
 .main-contents {
   padding: 5em 0 0;
+  min-height: 90vh;
 }
 
 /************/
@@ -28,7 +29,7 @@ a {
 
 header {
   width: 95%;
-  height: 4.5em;
+  height: 10vh;
   padding: 15px 0;
   margin: 0 auto;
   text-align: center;
@@ -60,6 +61,20 @@ nav > ul > li > a, nav > ul > li > form > a {
   text-transform: uppercase;
 }
 
+/************/
+/** footer **/
+/************/
+
+footer{
+  font-size: 80%;
+  color: #999999;
+  text-align: center;
+  margin-top: auto;
+  min-height: 10vh;
+  padding-bottom: 1em;
+  background-color: #fff;
+}
+
 /***********/
 /** Login **/
 /***********/
@@ -70,11 +85,6 @@ nav > ul > li > a, nav > ul > li > form > a {
   justify-content: center;
   align-items: center;
 }
-
-/* .login-btn > a {
-  display: table-cell;
-  vertical-align: middle;
-} */
 
 /**********/
 /** Post **/
