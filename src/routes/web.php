@@ -22,14 +22,14 @@ Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallbac
 
 // Post
 Route::get('/', 'Post\PostController@index');
-Route::get('/post/{post_id}', 'Post\PostController@show');
+Route::get('/post/{post_id}', 'Post\PostController@show')->where('post_id', '[0-9]+');
 Route::get('/post/create', 'Post\PostController@create');
 Route::post('/post', 'Post\PostController@store');
-Route::post('/post/{post_id}', 'Post\PostController@delete');
-Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites');
+Route::post('/post/{post_id}', 'Post\PostController@delete')->where('post_id', '[0-9]+');
+Route::get('/post/{post_id}/favorites', 'Post\PostController@favorites')->where('post_id', '[0-9]+');
 
 // User
-Route::get('/user/{user_id}', 'User\UserController@show');
+Route::get('/user/{user_id}', 'User\UserController@show')->where('user_id', '[0-9]+');
 
 // Favorite
 Route::post('/favorite/create', 'Favorite\FavoriteController@create');
