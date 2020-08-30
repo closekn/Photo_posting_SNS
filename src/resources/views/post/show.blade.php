@@ -4,6 +4,7 @@
   <div class="home-content">
     <div class="home-post">
       <div class="post-head">
+        <a href="/user/{{ $post->user->id }}"><img src="{{ $post->user->icon }}" class="post-user-icon"></a>
         <a href="/user/{{ $post->user->id }}" class="post-user-name">{{ $post->user->name }}</a>
         <div class="post-head-sub-items">
           <small class="post-time">{{ $post->created_at }}</small>

@@ -77,7 +77,7 @@ nav > ul > li > a, nav > ul > li > form > a {
 } */
 
 /**********/
-/** Home **/
+/** Post **/
 /**********/
 
 .home-content {
@@ -119,6 +119,13 @@ nav > ul > li > a, nav > ul > li > form > a {
 .post-user-name {
   font-size: 1.3em;
   color: #16160e;
+  padding-left: 0.3em;
+}
+
+.post-user-icon {
+  width: 1.3em;
+  height: 1.3em;
+  
 }
 
 .post-photo {
