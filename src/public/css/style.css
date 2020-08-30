@@ -19,7 +19,7 @@ a {
 }
 
 .main-contents {
-  padding: 5em 0 0;
+  padding: 9vh 0 0;
   min-height: 90vh;
 }
 
@@ -29,8 +29,8 @@ a {
 
 header {
   width: 95%;
-  height: 10vh;
-  padding: 15px 0;
+  height: 9vh;
+  padding: 1vh 0 0;
   margin: 0 auto;
   text-align: center;
   /* Fixing the header */
@@ -41,7 +41,7 @@ header {
 
 nav > ul {
   text-align: center;
-  padding: 10px 0;
+  padding: 1vh 0 0;
   margin: 0 auto;
 }
 
@@ -139,8 +139,13 @@ footer{
 }
 
 .post-photo {
+  margin: 1em 0 0;
   width: 200px;
   height: 200px;
+}
+
+.post-caption {
+  padding: 1em 0 0;
 }
 
 .post-favorite-items {
