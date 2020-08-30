@@ -51,6 +51,16 @@ class PostController extends Controller
     return redirect('/');
   }
 
+  public function delete($post_id)
+  {
+    if ( Post::find($post_id) == NULL ) { return redirect('/'); }
+    if ( Auth::id() != Post::find($post_id)->user_id ) { return redirect('/'); }
+
+    Post::destroy($post_id);
+
+    return redirect('/');
+  }
+
   public function favorites($post_id)
   {
     $favorites = Post::find($post_id)->favorites;

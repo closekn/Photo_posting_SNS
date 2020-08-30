@@ -83,6 +83,30 @@ nav > ul > li > a, nav > ul > li > form > a {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
+.post-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0rem 0.3rem;
+}
+
+.post-head-sub-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-time {
+  font-size: 0.7em;
+	padding-left: 1em;
+	padding-right: 1em;
+	color: #727171;
+}
+
+.post-head-sub-items > form {
+  margin: 0rem;
+}
+
 .post-user-name {
   font-size: 1.3em;
   color: #16160e;
@@ -94,18 +118,16 @@ nav > ul > li > a, nav > ul > li > form > a {
 }
 
 .post-favorite-items {
-  /* text-align: center;
-  display: flex; */
   display: flex;
-  justify-content: center; /*左右中央揃え*/
-  align-items: center;     /*上下中央揃え*/
+  justify-content: center;
+  align-items: center;
 }
 
 .post-good-form {
   margin: 0rem 0rem 0.3rem;
 }
 
-.post-time, .post-good-user {
+.post-good-user {
   font-size: 0.7em;
 	padding-left: 1em;
 	color: #727171;

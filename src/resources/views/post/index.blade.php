@@ -4,12 +4,20 @@
   <div class="home-content">
     @foreach ($posts as $post)
       <div class="home-post">
-        <p>
+        <div class="post-head">
           <a href="/user/{{ $post->user->id }}" class="post-user-name">{{ $post->user->name }}</a>
-          <small class="post-time">{{ $post->created_at }}</small>
-        </p>
+          <div class="post-head-sub-items">
+            <small class="post-time">{{ $post->created_at }}</small>
+            @if ( Auth::id() == $post->user_id )
+              <form action="/post/{{ $post->id }}" method="post">
+                {{ csrf_field() }}
+                <button class="btn btn-outline-danger btn-sm">Delete</button>
+              </form>
+            @endif
+          </div>
+        </div>
         <img src="{{ $post->photo }}" class="post-photo">
-        <div class="post-sub">
+        <div class="post-foot">
           <p class="post-caption">{!! nl2br(e($post->caption)) !!}</p>
           <div class="post-favorite-items">
             @if ( Auth::check() )
