@@ -12,14 +12,14 @@ class FavoriteController extends Controller
   public function create(Request $request)
   {
     if ( !Auth::check() ) { return redirect('/login'); }
-    if ( $request->post_id == NULL ) { return redirect('/'); }
+    if ( $request->post_id == NULL ) { return back(); }
 
     $newFavorite = Favorite::firstOrCreate([
       'user_id' => Auth::id(),
       'post_id' => $request->post_id,
     ]);
 
-    return redirect('/');
+    return back();
   }
 
   public function delete(Request $request)
@@ -34,6 +34,6 @@ class FavoriteController extends Controller
       Favorite::destroy($deleteFavorite->id);
     }
 
-    return redirect('/');
+    return back();
   }
 }

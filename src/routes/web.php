@@ -22,6 +22,7 @@ Route::get('/login/github/callback', 'Auth\LoginController@handleProviderCallbac
 
 // Post
 Route::get('/', 'Post\PostController@index');
+Route::get('/post/{post_id}', 'Post\PostController@show');
 Route::get('/post/create', 'Post\PostController@create');
 Route::post('/post', 'Post\PostController@store');
 Route::post('/post/{post_id}', 'Post\PostController@delete');

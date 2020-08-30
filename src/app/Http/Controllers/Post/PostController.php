@@ -18,6 +18,13 @@ class PostController extends Controller
     ]);
   }
 
+  public function show($post_id)
+  {
+    return view('post.show', [
+      'post' => Post::find($post_id)
+    ]);
+  }
+
   public function create()
   {
     return view('post.create');

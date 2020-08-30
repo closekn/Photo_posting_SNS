@@ -198,7 +198,7 @@ nav > ul > li > a, nav > ul > li > form > a {
   box-sizing: border-box;
 }
 
-.user-photo-content > div > img {
+.user-photo-content > div > a > img {
   display: block;
   max-width: 100%;
   height: auto;

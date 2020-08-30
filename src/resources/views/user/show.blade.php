@@ -15,7 +15,9 @@
     <div class="user-photo-content">
       @foreach ($user->posts->sortByDesc('created_at') as $post)
         <div>
-          <img src="{{ $post->photo }}">
+          <a href="/post/{{ $post->id }}">
+            <img src="{{ $post->photo }}">
+          </a>
         </div>
       @endforeach
     </div>
