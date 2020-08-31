@@ -2,6 +2,9 @@
 
 @section('content')
   <div class="fav-content">
+    @if ($favorites->count() == 0)
+      <p class="no-content">Not favorited yet.</p>
+    @endif
     @foreach ($favorites as $fav)
       <div class="fav-users">
         <p>

@@ -2,6 +2,9 @@
 
 @section('content')
   <div class="home-content">
+    @if ($posts->count() == 0)
+      <p class="no-content">No posts.</p>
+    @endif
     @foreach ($posts as $post)
       <div class="home-post">
         <div class="post-head">

@@ -35,19 +35,28 @@
       <div class="panel_area">
         <!-- posts -->
         <div id="panel1" class="tab_panel">
-          <div class="user-photo-content">
-            @foreach ($user->posts->sortByDesc('created_at') as $post)
-              <div>
-                <a href="/post/{{ $post->id }}">
-                  <img src="{{ $post->photo }}">
-                </a>
-              </div>
-            @endforeach
-          </div>
+          @if ($user->posts->count() == 0)
+            <div class="home-content">
+              <p class="no-content">No posts.</p>
+            </div>
+          @else
+            <div class="user-photo-content">
+              @foreach ($user->posts->sortByDesc('created_at') as $post)
+                <div>
+                  <a href="/post/{{ $post->id }}">
+                    <img src="{{ $post->photo }}">
+                  </a>
+                </div>
+              @endforeach
+            </div>
+          @endif
         </div>
         <!-- favorites -->
         <div id="panel2" class="tab_panel">
           <div class="home-content">
+            @if ($favorites->count() == 0)
+              <p class="no-content">No favorites.</p>
+            @endif
             @foreach ($favorites as $fav)
               <div class="home-post">
                 <div class="post-head">
