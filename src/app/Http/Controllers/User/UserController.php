@@ -12,9 +12,13 @@ class UserController extends Controller
   public function show($user_id)
   {
     $user = User::find($user_id);
+    if ( $user == NULL ) { return back(); }
+
+    $favorites = $user->favorites->sortByDesc('id');
 
     return view('user.show', [
-      'user' => $user
+      'user' => $user,
+      'favorites' => $favorites
     ]);
   }
 }

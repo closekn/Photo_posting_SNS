@@ -17,7 +17,7 @@
             @endif
           </div>
         </div>
-        <img src="{{ $post->photo }}" class="post-photo">
+        <a href="/post/{{ $post->id }}"><img src="{{ $post->photo }}" class="post-photo"></a>
         <div class="post-foot">
           <p class="post-caption">{!! nl2br(e($post->caption)) !!}</p>
           <div class="post-favorite-items">

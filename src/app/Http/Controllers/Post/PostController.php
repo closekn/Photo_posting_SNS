@@ -70,6 +70,8 @@ class PostController extends Controller
 
   public function favorites($post_id)
   {
+    if ( Post::find($post_id) == NULL ) { return back(); }
+
     $favorites = Post::find($post_id)->favorites;
 
     return view('post.favorites', [
