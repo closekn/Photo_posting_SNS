@@ -2,7 +2,12 @@
 
 画像投稿SNS
 
-## 作業
+## デプロイ
+
+https://photo-posting-sns.herokuapp.com/  
+運用テスト状態
+
+## ローカル作業
 
 ```shell
 # in /laradock
