@@ -7,6 +7,11 @@
 https://photo-posting-sns.herokuapp.com/  
 運用テスト状態
 
+```shell
+# herokuへのデプロイ
+$ git subtree push --prefix src/ heroku master
+```
+
 ## ローカル作業
 
 ```shell
