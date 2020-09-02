@@ -331,3 +331,9 @@ input[type="radio"] {
   margin: 1em 0;
   font-size: 1.5rem;
 }
+
+.error-content {
+  margin: 1em 0;
+  font-size: 1.5rem;
+  color: #ff6666;
+}

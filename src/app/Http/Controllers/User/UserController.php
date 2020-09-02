@@ -12,7 +12,11 @@ class UserController extends Controller
   public function show($user_id)
   {
     $user = User::find($user_id);
-    if ( $user == NULL ) { return back(); }
+    if ( $user == NULL ) {
+      return view('message.error', [
+        'error_message' => "There is no user for ID:${user_id}."
+      ]);
+    }
 
     $favorites = $user->favorites->sortByDesc('id');
 

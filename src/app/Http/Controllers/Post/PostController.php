@@ -20,8 +20,15 @@ class PostController extends Controller
 
   public function show($post_id)
   {
+    $post = Post::find($post_id);
+    if ( $post == NULL ) {
+      return view('message.error', [
+        'error_message' => "There is no post for ID:${post_id}."
+      ]);
+    }
+
     return view('post.show', [
-      'post' => Post::find($post_id)
+      'post' => $post
     ]);
   }
 
@@ -32,7 +39,11 @@ class PostController extends Controller
 
   public function store(Request $request)
   {
-    if ( !Auth::check() ) { return redirect('/'); }
+    if ( !Auth::check() ) {
+      return view('message.error', [
+        'error_message' => 'You need to login.'
+      ]);
+    }
 
     $this->validate($request, [
       'photo' => [
@@ -60,8 +71,16 @@ class PostController extends Controller
 
   public function delete($post_id)
   {
-    if ( Post::find($post_id) == NULL ) { return redirect('/'); }
-    if ( Auth::id() != Post::find($post_id)->user_id ) { return redirect('/'); }
+    if ( Post::find($post_id) == NULL ) {
+      return view('message.error', [
+        'error_message' => "There is no post for ID:${post_id}."
+      ]);
+    }
+    if ( Auth::id() != Post::find($post_id)->user_id ) {
+      return view('message.error', [
+        'error_message' => "ID:${post_id} is not your post."
+      ]);
+    }
 
     Post::destroy($post_id);
 
@@ -70,9 +89,14 @@ class PostController extends Controller
 
   public function favorites($post_id)
   {
-    if ( Post::find($post_id) == NULL ) { return back(); }
+    $post = Post::find($post_id);
+    if ( $post == NULL ) {
+      return view('message.error', [
+        'error_message' => "There is no post for ID:${post_id}."
+      ]);
+    }
 
-    $favorites = Post::find($post_id)->favorites;
+    $favorites = $post->favorites;
 
     return view('post.favorites', [
       'favorites' => $favorites

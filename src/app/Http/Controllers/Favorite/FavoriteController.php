@@ -12,11 +12,16 @@ class FavoriteController extends Controller
   public function create(Request $request)
   {
     if ( !Auth::check() ) { return redirect('/login'); }
-    if ( $request->post_id == NULL ) { return back(); }
+    $post_id = $request->post_id;
+    if ( $post_id == NULL ) {
+      return view('message.error', [
+        'error_message' => "There is no post for ID:${post_id}."
+      ]);
+    }
 
     $newFavorite = Favorite::firstOrCreate([
       'user_id' => Auth::id(),
-      'post_id' => $request->post_id,
+      'post_id' => $post_id,
     ]);
 
     return back();
